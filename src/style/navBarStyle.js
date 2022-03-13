@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
   position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-around;
   background-color: #c5dcf0;

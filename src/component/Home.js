@@ -10,7 +10,7 @@ function Home() {
       <Section>
         <h1>
           Welcome
-          <FontAwesomeIcon icon={faStore} />{' '}
+          <FontAwesomeIcon icon={faStore} />
         </h1>
         <p>
           A walk-in-a-park online shopping
