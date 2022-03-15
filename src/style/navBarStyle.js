@@ -7,6 +7,7 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-around;
   background-color: #c5dcf0;
+  z-index: 1;
   h1 {
     margin: 1rem;
     padding: 1rem;
@@ -21,6 +22,7 @@ export const Header = styled.header`
     font-size: 1.5rem;
     color: black;
     font-weight: 800;
+    cursor: pointer;
   }
 `;
 
