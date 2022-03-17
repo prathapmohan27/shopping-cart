@@ -1,5 +1,5 @@
 import React from 'react';
-import { getByText, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
@@ -26,7 +26,7 @@ describe('NaBar component', () => {
     );
     expect(screen.getByText(/welcome/i)).toBeInTheDocument();
     userEvent.click(screen.getByTestId('shopNow'));
-    expect(screen.getByText(/Product/i)).toBeInTheDocument();
+    expect(screen.getByText(/Products/i)).toBeInTheDocument();
   });
 
   it('landing on  about page', () => {
@@ -37,6 +37,6 @@ describe('NaBar component', () => {
       </BrowserRouter>
     );
     userEvent.click(screen.getByText(/about/i));
-    expect(screen.getByText(/about page/i)).toBeInTheDocument();
+    expect(screen.getByText(/about us/i)).toBeInTheDocument();
   });
 });

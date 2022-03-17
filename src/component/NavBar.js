@@ -5,7 +5,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { Header, Span, Li, NavLink } from '../style/navBarStyle';
 
-function NavBar() {
+function NavBar(props) {
   return (
     <Header>
       <h1>
@@ -23,9 +23,9 @@ function NavBar() {
           <NavLink to="/about">
             <li>About</li>
           </NavLink>
-          <Li>
+          <Li onClick={props.close}>
             <FontAwesomeIcon icon={faCartShopping} />
-            <Span>0</Span>
+            <Span>{props.length}</Span>
           </Li>
         </ul>
       </nav>

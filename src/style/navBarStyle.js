@@ -35,11 +35,12 @@ export const Li = styled.li`
   position: relative;
 `;
 
+//for tell how many item in the cart
 export const Span = styled.span`
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #136597;
+  background-color: #7171f0;
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 50%;

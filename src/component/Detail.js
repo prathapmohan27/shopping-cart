@@ -12,8 +12,9 @@ import {
 } from '../style/detailStyle';
 import { Link, useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
+export const detailContext = React.createContext();
 
-function Detail() {
+function Detail(props) {
   const { id } = useParams();
   let [item, setItem] = useState({});
   let [itemRating, setItemRating] = useState({});
@@ -48,6 +49,17 @@ function Detail() {
     alert('Thank you for purchase');
   };
 
+  const handleAddToCart = () => {
+    const temp = {
+      id: item.id,
+      quantity: count,
+      img: item.image,
+      title: item.title,
+      price: item.price,
+    };
+    props.getCartItem(temp);
+  };
+
   return (
     <Div>
       <img src={item.image} alt="product" />
@@ -69,7 +81,7 @@ function Detail() {
         </Quantity>
         <P>$ {item.price}</P>
         <Cart>
-          <AddCart>Add to Cart</AddCart>
+          <AddCart onClick={handleAddToCart}>Add to Cart</AddCart>
           <Link to="/product" onClick={buyProduct}>
             <Buy>Buy Now</Buy>
           </Link>

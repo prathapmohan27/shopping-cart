@@ -25,13 +25,17 @@ function Product() {
   }, []);
 
   const fetchItem = async () => {
-    const response = await fetch(`https://fakestoreapi.com/products`, {
-      mode: 'cors',
-    });
-    const items = await response.json();
-    new Promise(() => {
-      setTimeout(setLoading(false), 500);
-    }).then(setData([...items]));
+    try {
+      const response = await fetch(`https://fakestoreapi.com/products`, {
+        mode: 'cors',
+      });
+      const items = await response.json();
+      new Promise(() => {
+        setTimeout(setLoading(false), 500);
+      }).then(setData([...items]));
+    } catch (error) {
+      alert(error);
+    }
   };
 
   const renderLoader = () => {
