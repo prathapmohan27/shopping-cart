@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Product from './Product';
 import About from './About';
@@ -59,7 +59,7 @@ function Main() {
   };
 
   return (
-    <BrowserRouter>
+    <Router>
       <NavBar length={cartItem.length} close={CloseCart} />
       <Cart
         data={cartItem}
@@ -70,7 +70,7 @@ function Main() {
         removeAll={removeAll}
       />
       <Routes>
-        <Route path="/" exact element={<Home />}></Route>
+        <Route path="*" exact element={<Home />}></Route>
         <Route path="/product" exact element={<Product />}></Route>
         <Route
           path="/product/:id"
@@ -79,7 +79,7 @@ function Main() {
         ></Route>
         <Route path="/about" exact element={<About />}></Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
