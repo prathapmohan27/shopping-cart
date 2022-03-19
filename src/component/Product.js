@@ -14,6 +14,14 @@ const Div = styled.div`
     grid-auto-rows: 1fr;
     gap: 1rem;
   }
+  @media only screen and (max-width: 728px) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 `;
 
 function Product() {
@@ -39,7 +47,7 @@ function Product() {
   };
 
   const renderLoader = () => {
-    return loading ? <Loader /> : null;
+    return loading ? <Loader className="loader" /> : null;
   };
   return (
     <Div>

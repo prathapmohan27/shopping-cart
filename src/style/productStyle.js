@@ -25,6 +25,20 @@ export const Div = styled.div`
     color: #c2c0ba;
     font-size: 1rem;
   }
+  @media only screen and (max-width: 768px) {
+    width: 8rem;
+    section {
+      padding: 0;
+    }
+    h3 {
+      font-size: 1rem;
+      overflow-wrap: break-word;
+    }
+    .loader {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
 `;
 export const Price = styled.p`
   color: green;
@@ -48,8 +62,8 @@ const rotate = keyframes`
 `;
 
 export const Loader = styled.div`
-  margin-left: 45%;
-  margin-right: 45%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10%;
   width: 10rem;
   height: 10rem;

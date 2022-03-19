@@ -8,6 +8,7 @@ export const Header = styled.header`
   justify-content: space-around;
   background-color: #c5dcf0;
   z-index: 1;
+  width: 100%;
   h1 {
     margin: 1rem;
     padding: 1rem;
@@ -23,6 +24,22 @@ export const Header = styled.header`
     color: black;
     font-weight: 800;
     cursor: pointer;
+  }
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ul {
+      width: 50%;
+    }
+    li {
+      padding: 0;
+      margin: 0;
+    }
+    span {
+      display: none;
+    }
   }
 `;
 

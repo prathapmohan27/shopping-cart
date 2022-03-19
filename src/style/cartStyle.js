@@ -25,6 +25,15 @@ export const Div = styled.div`
   span {
     color: green;
   }
+
+  @media only screen and (max-width: 768px) {
+    width: 80%;
+    width: ${(props) => (props.visible ? '100%' : '0')};
+    opacity: ${(props) => (props.visible ? '1' : '0')};
+    pointer-events: ${(props) => (props.visible ? 'all' : 'none')};
+    text-align: center;
+    padding: 0.8rem;
+  }
 `;
 export const Close = styled.button`
   border: none;

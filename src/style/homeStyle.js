@@ -5,6 +5,15 @@ export const Div = styled.div`
   margin: 3rem;
   display: flex;
   justify-content: space-evenly;
+  @media only screen and (max-width: 768px) {
+    justify-content: flex-start;
+    img {
+      display: none;
+    }
+    section {
+      width: 100%;
+    }
+  }
 `;
 
 export const Section = styled.section`

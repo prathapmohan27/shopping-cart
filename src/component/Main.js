@@ -56,6 +56,7 @@ function Main() {
 
   const removeAll = () => {
     setCartItem([]);
+    CloseCart();
   };
 
   return (

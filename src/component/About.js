@@ -17,6 +17,13 @@ const Div = styled.div`
     justify-content: space-between;
     margin: 1rem;
   }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    div {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 `;
 
 const A = styled.a`

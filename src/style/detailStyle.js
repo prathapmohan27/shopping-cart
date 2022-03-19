@@ -19,6 +19,15 @@ export const Div = styled.div`
   h3 {
     font-size: 2rem;
   }
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 70%;
+    align-items: flex-start;
+    section {
+      padding: 0;
+      margin: 0;
+    }
+  }
 `;
 
 export const Quantity = styled.div`
@@ -26,10 +35,15 @@ export const Quantity = styled.div`
   margin: 1.5rem;
   display: flex;
   justify-content: space-between;
-
+  img {
+    width: 10rem;
+  }
   span {
     font-size: 1.2rem;
     font-weight: 800;
+  }
+  h3 {
+    font-size: 1.5rem;
   }
 `;
 
